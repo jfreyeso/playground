@@ -9,3 +9,6 @@ duckduckgo-search
 fastapi[standard]
 PyGithub
 gradio
+sqlalchemy
+boto3
+anthropic

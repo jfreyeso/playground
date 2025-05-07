@@ -11,19 +11,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#FAFAFA',
-        primaryAccent: '#18181B',
-        brand: '#FF4017',
+        primary: '#212529', // Dark gray for text (good contrast)
+        primaryAccent: '#808080', // Neutral gray for accents
+        brand: 'rgba(0, 130, 9, 0.8)', // Bright orange for branding
         background: {
-          DEFAULT: '#111113',
-          secondary: '#27272A'
+          DEFAULT: '#FFFFFF', // White background for the main panel
+          secondary: '#CED4DA', // Very light gray for secondary panels
+          tertiary: '#E9ECEF', // Light gray for tertiary panels
+          quaternary: '#DEE2E6', // Slightly darker gray for additional contrast
+          quinary: '#CED4DA' // Medium gray for testing deeper contrast
         },
-        secondary: '#f5f5f5',
-        border: 'rgba(var(--color-border-default))',
-        accent: '#27272A',
-        muted: '#A1A1AA',
-        destructive: '#E53935',
-        positive: '#22C55E'
+        secondary: '#ADB5BD', // Medium gray for borders or subtle elements
+        border: '#6C757D', // Neutral gray for visible borders
+        accent: '#868E96', // Muted gray for accents
+        muted: '#A1A1AA', // Muted gray for less prominent text
+        destructive: '#E03131', // Softer red for destructive actions
+        positive: '#37B24D' // Softer green for success messages
       },
       fontFamily: {
         geist: 'var(--font-geist-sans)',

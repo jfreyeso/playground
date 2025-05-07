@@ -45,15 +45,25 @@ github_agent = Agent(
 name="GitHub Code Agent",
 role="Find code examples on GitHub",
 model=Claude(id=MODELS),
-tools=[GithubTools(search_repositories=True)],
-instructions="Find code examples on GitHub related to the user's query. Explain what the code does. Limit to 3 GitHub repo in English",
+tools=[GithubTools()],
+instructions="review the repo https://github.com/jfreyeso/playground/ and anwser questions about it.",
 show_tool_calls=True,
 markdown=True,
 debug_mode=True
 )
 
+github_agent_2 = Agent(
+name="GitHub Code Agent 2",
+role="Find code examples on GitHub",
+model=Claude(id=MODELS),
+tools=[GithubTools()],
+instructions="review the repo https://github.com/jfreyeso/playground/ and anwser questions about it.",
+show_tool_calls=True,
+markdown=True,
+debug_mode=True
+)
 
-app = Playground(agents=[github_agent, giphy_agent, agent_Claude,agent_bedrock,]).get_app()
+app = Playground(agents=[github_agent,github_agent_2, giphy_agent, agent_Claude,agent_bedrock,]).get_app()
 
 if __name__ == "__main__":
     

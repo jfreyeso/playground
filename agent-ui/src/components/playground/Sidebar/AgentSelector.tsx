@@ -59,10 +59,10 @@ export function AgentSelector() {
       value={agentId || ''}
       onValueChange={(value) => handleOnValueChange(value)}
     >
-      <SelectTrigger className="h-9 w-full rounded-xl border border-primary/15 bg-primaryAccent text-xs font-medium uppercase">
+      <SelectTrigger className="border-primary/15 h-9 w-full rounded-xl border bg-white text-xs font-medium uppercase text-black">
         <SelectValue placeholder="Select Agent" />
       </SelectTrigger>
-      <SelectContent className="border-none bg-primaryAccent font-dmmono shadow-lg">
+      <SelectContent className="font-dmmono border-none bg-white text-black shadow-lg">
         {agents.map((agent, index) => (
           <SelectItem
             className="cursor-pointer"
